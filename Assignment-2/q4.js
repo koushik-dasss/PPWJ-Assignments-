@@ -5,9 +5,7 @@
 // the program works — it checks if a number meets both conditions
 // at once.Use modulus and conditional operator.
 let roll = prompt("Enter student's roll number : ");
-if(roll%3===0 && roll%5===0){
-    console.log("Roll number "+ roll + " is selected.");
-}else{
-    console.log("Roll number "+ roll + " is not selected.");
-    
-}
+let result = (roll%3==0 && roll%5==0)? console.log("Roll " + roll + " is selected for the relay race"):console.log("Roll " + roll + " is not selected for relay race . ");
+console.log(result);
+
+
