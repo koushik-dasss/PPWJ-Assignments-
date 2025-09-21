@@ -8,9 +8,5 @@
 // should print Year 2012 is a leap year. Use logical and ternary
 // operator.
 let year = prompt("Enter a year");
-if((year%4===0 && year%100!==0)||(year%400===0)){
-    console.log(year + " is a leap year.");
-}else{
-    console.log(year + " is not a leap year.");
-    
-}
+let result = ((year%4==0 && year%100!=0)||(year%400==0))? console.log(year + " is a leap year."): console.log(year + " is not a leap year.");
+console.log(result);
