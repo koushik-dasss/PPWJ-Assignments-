@@ -5,7 +5,7 @@
 // ”You are not eligible to vote yet.”
 // Write a JavaScript program to implement this eligibility check using
 // comparison operators and an if-else statement.
-let age = prompt("Enter the age of the person ");// user input of age 
+let age = parseInt(prompt("Enter the age of the person "));// user input of age 
 if(age>=18){
     console.log("You are eligible to vote.");
 }else{
