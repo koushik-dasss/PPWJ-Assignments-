@@ -9,10 +9,9 @@
 // •The original number (PIN),
 // •The reversed number (Reversed PIN).
 let code = parseInt(prompt("Enter the code :"));
-let rev = 0 , temp = code;
-while(temp!=0){
-    rev=rev*10+(temp%10);
-    temp=parseInt(temp/10);
+let rev = 0 ;
+for(let temp = code ; temp!=0 ; temp = parseInt(temp/10)){
+    rev=rev*10+ (temp%10);
 }
 console.log("The original PIN is :"+ code);
 console.log("The reversed PIN is :"+ rev);
