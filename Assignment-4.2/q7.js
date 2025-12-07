@@ -70,12 +70,10 @@ switch(choice){
     console.log("The reversed array is :" , arr );
     break;
     case 5:
-    let ele = 45 , index = 0;
+    let ele = 45 , index = -1;
     for(let i = 0 ; i< arr.length ;i++){
         if(arr[i]===ele){
-            index = ele;
-        }else{
-            index = -1;
+            index = i;
         }
     }
     console.log("The element "+ ele + " is present in the array in the position "+ index );
@@ -85,9 +83,7 @@ switch(choice){
     for(let i = 0 ; i< arr.length ;i++){
         for(let j = 0 ; j < arr.length - i - 1 ; j++){
             if(arr[j]>arr[j+1]){
-                let temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                [arr[j],arr[j+1]=arr[j+1],arr[j]];
             }
         }
     }
@@ -105,12 +101,11 @@ switch(choice){
     for(let i = 0 ; i< arr.length ;i++){
         for(let j = 0 ; j < arr.length - i - 1 ; j++){
             if(arr[j]>arr[j+1]){
-                let temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                [arr[j],arr[j+1]=arr[j+1],arr[j]];
             }
         }
     }
+    console.log("The sorted array is :", arr);
     default :
     console.log("Invalid choice.");
 }
