@@ -1,0 +1,32 @@
+<!-- WriteJavaScriptcodetodothefollowing:
+•SelecttheelementbyIDandprintitstextcontenttothe
+console.
+•Selectall<p>elementsbytagnameandprinthowmany<p>
+tagsarepresent.
+•Selectallelementswithclassnamegreetingandchangetheir
+textcolortoblue.
+Bothelementswithclassgreetingshouldturnblueinthe
+browser. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas HTML5</title>
+</head>
+<body>
+    <div id="one" class="greeting">Hello World</div>
+    <p class="greeting">Welcome to JavaScript</p>
+    <p>Let's learn DOM methods!</p>
+    <script>
+        let idElement = document.getElementById("one");
+        console.log(idElement.textContent);
+        let pTags = document.getElementsByTagName("p");
+        console.log("Number of <p> tags:", pTags.length);
+        let greetings = document.getElementsByClassName("greeting");
+        for (let i = 0; i < greetings.length; i++) {
+            greetings[i].style.color = "blue";
+        }
+    </script>    
+</body>
+</html>
