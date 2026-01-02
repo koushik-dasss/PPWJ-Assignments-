@@ -1,0 +1,48 @@
+<!-- 4 Create a webpage with a rectangular <div> element. Using
+JavaScript:
+•Display text inside the <div> (“hello world”).
+•Apply width, height, and background color to the <div>.
+•Change the background color of the <div> when the following
+events occur:
+Event Background Color
+mousedown Green
+mouseup Blue
+mouseover Red
+mouseout Yellow -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-4</title>
+    <style>
+        #box{
+            width:200px;
+            height:150px;
+            background: lightgray;
+            text-align: center;
+            padding-top:50px;
+            font-size:20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box">hello world</div>
+    <script>
+        let box = document.getElementById("box");
+        box.onmousedown = function(){
+            box.style.backgroundColor = "green";
+        };
+        box.onmouseup = function(){
+            box.style.backgroundColor = "blue";
+        };
+        box.onmouseover = function(){
+            box.style.backgroundColor = "red";
+        };
+        box.onmouseout = function(){
+            box.style.backgroundColor = "yellow";
+        };
+    </script>
+</body>
+</html>
