@@ -1,0 +1,46 @@
+<!-- Q3 Create a web page where clicking anywhere on the window will
+toggle the background and text color of the page.
+•Create an HTML page with a heading saying “Click anywhere
+to toggle Dark Mode”.
+•Use a JavaScript variable darkMode (boolean) to track whether
+the page is in Dark Mode or not.
+•Use the window.onclick event to handle clicks anywhere on
+the page.
+•If darkMode is false:
+– Set background color to black
+– Set text color to white
+– Set darkMode to true
+– Display the message: “Dark Mode is ON”
+•If darkMode is true:
+– Set background color to white
+– Set text color to black
+– Set darkMode to false
+– Display the message: “Dark Mode is OFF” -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+</head>
+<body>
+    <h1>Click anywhere to toggle Dark Mode</h1>
+    <p id="status"></p>
+    <script>
+        let darkMode = false;
+        window.onclick = function(){
+            if(!darkMode){
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                document.getElementById("status").textContent  = "Dark Mode is ON";
+                darkMode = true;
+            }else{
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                document.getElementById("status").textContent = "Dark Mode is OFF" 
+                darkMode = false;
+            }
+        };
+    </script>
+</body>
+</html>
