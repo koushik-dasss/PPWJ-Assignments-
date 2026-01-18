@@ -7,11 +7,11 @@ class Student{
     get name(){
         return this._name;
     }
-    get marks(){
-        return this._marks;
-    }
     set name(newName){
         this._name = newName
+    }
+    get marks(){
+        return this._marks;
     }
     set marks(newMarks){
         if(newMarks >= 0 && newMarks <= 100){
@@ -21,20 +21,23 @@ class Student{
         }
     }
     displayInfo(){
-        return "Name : "+ this._name + " Marks : "+ this._marks + " Roll Number : "+ this.rollNumber;
+        return "Name : "+ this._name + " Roll no. : " + this.rollNumber + " Marks : "+ this._marks;
     }
     result(){
-        return this._marks>=40 ? "Pass" : "Fail" ;
+        return this._marks >= 40 ? "Pass" : "Fail" ; 
     }
+
 }
-let students = [new Student("Koushik", 14, 60), new Student("Roman", 15 , 32), new Student("TSG",16,89), new Student("Alex",12,56) , new Student("Raman",16,12)];
-console.log("Original students list : ");
-for(let stu of students){
-    console.log(stu.displayInfo() , "|  Result : " , stu.result());
-}
-students[0].name = "DJ Alok";
-students[4].marks = 78;
-console.log("Updated list is : ");
+let students = [new Student("Koushik",12,40),new Student(), new Student(), new Student() , new Student()];
+console.log("Original list is : ");
 for(let stu of students){
     console.log(stu.displayInfo() , "| Result : ", stu.result());
 }
+students[3].marks = 78;
+students[4].name = "Alexa";
+console.log("Updated list is : ");
+
+for(let stu of students){
+    console.log(stu.displayInfo() , "| Result : ", stu.result());
+}
+
